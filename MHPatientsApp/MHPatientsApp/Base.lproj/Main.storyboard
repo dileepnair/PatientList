@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HpH-ow-z37">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Patients-->
+        <scene sceneID="mDV-Vq-ge0">
+            <objects>
+                <viewController title="Patients" id="pec-cW-FSd" customClass="PatientsViewController" customModule="MHPatientsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ez1-Fp-Hj0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XWS-Nd-IXf">
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="NKA-JH-XDZ">
+                                    <rect key="frame" x="0.0" y="136" width="414" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PatientsTableViewListCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PatientsTableViewListCell" rowHeight="80" id="pgM-3g-VQs" customClass="PatientsTableViewListCell" customModule="MHPatientsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pgM-3g-VQs" id="kdn-b3-mBB" customClass="PatientsCustomView" customModule="MHPatientsApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogb-NE-M6t" customClass="PatientsCustomView" customModule="MHPatientsApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ogb-NE-M6t" firstAttribute="top" secondItem="kdn-b3-mBB" secondAttribute="top" id="3e0-Xf-nCa"/>
+                                                <constraint firstAttribute="trailing" secondItem="ogb-NE-M6t" secondAttribute="trailing" id="THm-sO-otV"/>
+                                                <constraint firstAttribute="bottom" secondItem="ogb-NE-M6t" secondAttribute="bottom" id="VoG-Ma-EK9"/>
+                                                <constraint firstItem="ogb-NE-M6t" firstAttribute="leading" secondItem="kdn-b3-mBB" secondAttribute="leading" id="aRf-Wd-La2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="nibContentView" destination="ogb-NE-M6t" id="idH-D6-rP8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pec-cW-FSd" id="F7E-lM-35R"/>
+                                    <outlet property="delegate" destination="pec-cW-FSd" id="98y-6F-96u"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IvP-FS-N9q" firstAttribute="bottom" secondItem="XWS-Nd-IXf" secondAttribute="bottom" id="0Er-Yo-FhQ"/>
+                            <constraint firstItem="XWS-Nd-IXf" firstAttribute="top" secondItem="IvP-FS-N9q" secondAttribute="top" constant="10" id="7DP-KD-i0b"/>
+                            <constraint firstItem="IvP-FS-N9q" firstAttribute="trailing" secondItem="XWS-Nd-IXf" secondAttribute="trailing" id="ALz-nB-AX0"/>
+                            <constraint firstItem="XWS-Nd-IXf" firstAttribute="leading" secondItem="IvP-FS-N9q" secondAttribute="leading" id="mSm-mq-mXR"/>
+                            <constraint firstItem="XWS-Nd-IXf" firstAttribute="centerX" secondItem="IvP-FS-N9q" secondAttribute="centerX" id="wEP-xJ-QKG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IvP-FS-N9q"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xca-Lq-d1T"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="NKA-JH-XDZ" id="PoB-9y-RFW"/>
+                        <outlet property="patientsTableView" destination="XWS-Nd-IXf" id="XgG-dr-PfX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fh5-Aw-L0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818.4000000000001" y="92.203898050974516"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fol-RR-eKQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HpH-ow-z37" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ePX-E4-9fl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pec-cW-FSd" kind="relationship" relationship="rootViewController" id="DIQ-Uu-1dI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FsN-lA-EzB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="92.410714285714278"/>
+        </scene>
+    </scenes>
+</document>

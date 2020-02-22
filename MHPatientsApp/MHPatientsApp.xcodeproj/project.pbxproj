@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22070A77231684FF00980BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070A76231684FF00980BD6 /* AppDelegate.swift */; };
+		22070A7B231684FF00980BD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070A7A231684FF00980BD6 /* ViewController.swift */; };
+		22070A7E231684FF00980BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22070A7C231684FF00980BD6 /* Main.storyboard */; };
+		22070A81231684FF00980BD6 /* MHPatientsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22070A7F231684FF00980BD6 /* MHPatientsApp.xcdatamodeld */; };
+		22070A832316850300980BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22070A822316850300980BD6 /* Assets.xcassets */; };
+		22070A862316850300980BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22070A842316850300980BD6 /* LaunchScreen.storyboard */; };
+		22070A912316850300980BD6 /* MHPatientsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070A902316850300980BD6 /* MHPatientsAppTests.swift */; };
+		22070A9C2316850300980BD6 /* MHPatientsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070A9B2316850300980BD6 /* MHPatientsAppUITests.swift */; };
+		22070AAB231686AD00980BD6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AAA231686AD00980BD6 /* NetworkManager.swift */; };
+		22070AB323168DF000980BD6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AB223168DF000980BD6 /* HTTPMethod.swift */; };
+		22070AB523168E5900980BD6 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AB423168E5900980BD6 /* EndPointType.swift */; };
+		22070AB723168F0300980BD6 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AB623168F0300980BD6 /* HTTPTask.swift */; };
+		22070ABC2316901000980BD6 /* ParamEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070ABB2316901000980BD6 /* ParamEncoding.swift */; };
+		22070ABE231690E500980BD6 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070ABD231690E500980BD6 /* URLParameterEncoder.swift */; };
+		22070AC02316935900980BD6 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070ABF2316935900980BD6 /* NetworkRouter.swift */; };
+		22070AC2231693E600980BD6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AC1231693E600980BD6 /* Router.swift */; };
+		22070AC42316986E00980BD6 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AC32316986E00980BD6 /* JSONParameterEncoder.swift */; };
+		22070AC623169A0200980BD6 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AC523169A0200980BD6 /* NetworkLogger.swift */; };
+		22070AC823169D5200980BD6 /* PatientsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AC723169D5200980BD6 /* PatientsEndPoint.swift */; };
+		22070AD02316A23200980BD6 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070ACF2316A23200980BD6 /* Patient.swift */; };
+		22070AD22316C59900980BD6 /* PatientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AD12316C59900980BD6 /* PatientsViewController.swift */; };
+		22070AD52316C67700980BD6 /* PatientsViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AD42316C67700980BD6 /* PatientsViewControllerDataSource.swift */; };
+		22070AD82316C77C00980BD6 /* PatientsTableViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AD72316C77C00980BD6 /* PatientsTableViewListCell.swift */; };
+		22070ADB2316C95B00980BD6 /* PatientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070ADA2316C95B00980BD6 /* PatientViewModel.swift */; };
+		22070ADD2316CB0400980BD6 /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070ADC2316CB0400980BD6 /* TextPresentable.swift */; };
+		22070AE02316CC3300980BD6 /* PatientsCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22070ADF2316CC3300980BD6 /* PatientsCustomView.xib */; };
+		22070AE22316CF2000980BD6 /* PatientsCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AE12316CF2000980BD6 /* PatientsCustomView.swift */; };
+		22070AE82316F71400980BD6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22070AE72316F71400980BD6 /* NibLoadable.swift */; };
+		22C132F12318499600AFB27A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C132F02318499600AFB27A /* SceneDelegate.swift */; };
+		22C132F923185FC900AFB27A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C132F823185FC900AFB27A /* CoreDataManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22070A8D2316850300980BD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22070A6B231684FF00980BD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22070A72231684FF00980BD6;
+			remoteInfo = MHPatientsApp;
+		};
+		22070A982316850300980BD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22070A6B231684FF00980BD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22070A72231684FF00980BD6;
+			remoteInfo = MHPatientsApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22070A73231684FF00980BD6 /* MHPatientsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHPatientsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22070A76231684FF00980BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22070A7A231684FF00980BD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22070A7D231684FF00980BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22070A80231684FF00980BD6 /* MHPatientsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MHPatientsApp.xcdatamodel; sourceTree = "<group>"; };
+		22070A822316850300980BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22070A852316850300980BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22070A872316850300980BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22070A8C2316850300980BD6 /* MHPatientsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHPatientsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22070A902316850300980BD6 /* MHPatientsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPatientsAppTests.swift; sourceTree = "<group>"; };
+		22070A922316850300980BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22070A972316850300980BD6 /* MHPatientsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHPatientsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22070A9B2316850300980BD6 /* MHPatientsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHPatientsAppUITests.swift; sourceTree = "<group>"; };
+		22070A9D2316850300980BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22070AAA231686AD00980BD6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		22070AB223168DF000980BD6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		22070AB423168E5900980BD6 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		22070AB623168F0300980BD6 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		22070ABB2316901000980BD6 /* ParamEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamEncoding.swift; sourceTree = "<group>"; };
+		22070ABD231690E500980BD6 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		22070ABF2316935900980BD6 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		22070AC1231693E600980BD6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		22070AC32316986E00980BD6 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		22070AC523169A0200980BD6 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		22070AC723169D5200980BD6 /* PatientsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsEndPoint.swift; sourceTree = "<group>"; };
+		22070ACF2316A23200980BD6 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		22070AD12316C59900980BD6 /* PatientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsViewController.swift; sourceTree = "<group>"; };
+		22070AD42316C67700980BD6 /* PatientsViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsViewControllerDataSource.swift; sourceTree = "<group>"; };
+		22070AD72316C77C00980BD6 /* PatientsTableViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsTableViewListCell.swift; sourceTree = "<group>"; };
+		22070ADA2316C95B00980BD6 /* PatientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewModel.swift; sourceTree = "<group>"; };
+		22070ADC2316CB0400980BD6 /* TextPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPresentable.swift; sourceTree = "<group>"; };
+		22070ADF2316CC3300980BD6 /* PatientsCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientsCustomView.xib; sourceTree = "<group>"; };
+		22070AE12316CF2000980BD6 /* PatientsCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsCustomView.swift; sourceTree = "<group>"; };
+		22070AE72316F71400980BD6 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		22C132F02318499600AFB27A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = MHPatientsApp/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
+		22C132F823185FC900AFB27A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22070A70231684FF00980BD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22070A892316850300980BD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22070A942316850300980BD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22070A6A231684FF00980BD6 = {
+			isa = PBXGroup;
+			children = (
+				22070A75231684FF00980BD6 /* MHPatientsApp */,
+				22070A8F2316850300980BD6 /* MHPatientsAppTests */,
+				22070A9A2316850300980BD6 /* MHPatientsAppUITests */,
+				22070A74231684FF00980BD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22070A74231684FF00980BD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22070A73231684FF00980BD6 /* MHPatientsApp.app */,
+				22070A8C2316850300980BD6 /* MHPatientsAppTests.xctest */,
+				22070A972316850300980BD6 /* MHPatientsAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22070A75231684FF00980BD6 /* MHPatientsApp */ = {
+			isa = PBXGroup;
+			children = (
+				22C132F723185FB600AFB27A /* CoreDataManager */,
+				22070AD92316C80900980BD6 /* Protocols */,
+				22070AD62316C6EE00980BD6 /* View */,
+				22070AD32316C65500980BD6 /* Controllers */,
+				22070AB023168D8E00980BD6 /* Application */,
+				22070AAF23168D8300980BD6 /* Model */,
+				22070AAE23168D6E00980BD6 /* ViewController */,
+				22070AA92316866500980BD6 /* Networking */,
+				22070A7C231684FF00980BD6 /* Main.storyboard */,
+				22C132F02318499600AFB27A /* SceneDelegate.swift */,
+				22070A822316850300980BD6 /* Assets.xcassets */,
+				22070A842316850300980BD6 /* LaunchScreen.storyboard */,
+				22070A872316850300980BD6 /* Info.plist */,
+				22070A7F231684FF00980BD6 /* MHPatientsApp.xcdatamodeld */,
+			);
+			path = MHPatientsApp;
+			sourceTree = "<group>";
+		};
+		22070A8F2316850300980BD6 /* MHPatientsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				22070A902316850300980BD6 /* MHPatientsAppTests.swift */,
+				22070A922316850300980BD6 /* Info.plist */,
+			);
+			path = MHPatientsAppTests;
+			sourceTree = "<group>";
+		};
+		22070A9A2316850300980BD6 /* MHPatientsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22070A9B2316850300980BD6 /* MHPatientsAppUITests.swift */,
+				22070A9D2316850300980BD6 /* Info.plist */,
+			);
+			path = MHPatientsAppUITests;
+			sourceTree = "<group>";
+		};
+		22070AA92316866500980BD6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				22070ABA23168FE300980BD6 /* Service */,
+				22070AB923168FDA00980BD6 /* Manager */,
+				22070AB823168FC700980BD6 /* Encoding */,
+				22070AB123168DB300980BD6 /* EndPoint */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		22070AAE23168D6E00980BD6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22070A7A231684FF00980BD6 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		22070AAF23168D8300980BD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22070ACF2316A23200980BD6 /* Patient.swift */,
+				22070ADA2316C95B00980BD6 /* PatientViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22070AB023168D8E00980BD6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				22070A76231684FF00980BD6 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		22070AB123168DB300980BD6 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				22070AC723169D5200980BD6 /* PatientsEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		22070AB823168FC700980BD6 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				22070ABB2316901000980BD6 /* ParamEncoding.swift */,
+				22070ABD231690E500980BD6 /* URLParameterEncoder.swift */,
+				22070AC32316986E00980BD6 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		22070AB923168FDA00980BD6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				22070AAA231686AD00980BD6 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		22070ABA23168FE300980BD6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				22070AB223168DF000980BD6 /* HTTPMethod.swift */,
+				22070AB423168E5900980BD6 /* EndPointType.swift */,
+				22070AB623168F0300980BD6 /* HTTPTask.swift */,
+				22070ABF2316935900980BD6 /* NetworkRouter.swift */,
+				22070AC1231693E600980BD6 /* Router.swift */,
+				22070AC523169A0200980BD6 /* NetworkLogger.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		22070AD32316C65500980BD6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				22070AD12316C59900980BD6 /* PatientsViewController.swift */,
+				22070AD42316C67700980BD6 /* PatientsViewControllerDataSource.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		22070AD62316C6EE00980BD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22070ADE2316CBF400980BD6 /* Custom */,
+				22070AD72316C77C00980BD6 /* PatientsTableViewListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22070AD92316C80900980BD6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				22070ADC2316CB0400980BD6 /* TextPresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		22070ADE2316CBF400980BD6 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				22070ADF2316CC3300980BD6 /* PatientsCustomView.xib */,
+				22070AE12316CF2000980BD6 /* PatientsCustomView.swift */,
+				22070AE72316F71400980BD6 /* NibLoadable.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		22C132F723185FB600AFB27A /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				22C132F823185FC900AFB27A /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22070A72231684FF00980BD6 /* MHPatientsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22070AA02316850300980BD6 /* Build configuration list for PBXNativeTarget "MHPatientsApp" */;
+			buildPhases = (
+				22070A6F231684FF00980BD6 /* Sources */,
+				22070A70231684FF00980BD6 /* Frameworks */,
+				22070A71231684FF00980BD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MHPatientsApp;
+			productName = MHPatientsApp;
+			productReference = 22070A73231684FF00980BD6 /* MHPatientsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22070A8B2316850300980BD6 /* MHPatientsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22070AA32316850300980BD6 /* Build configuration list for PBXNativeTarget "MHPatientsAppTests" */;
+			buildPhases = (
+				22070A882316850300980BD6 /* Sources */,
+				22070A892316850300980BD6 /* Frameworks */,
+				22070A8A2316850300980BD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22070A8E2316850300980BD6 /* PBXTargetDependency */,
+			);
+			name = MHPatientsAppTests;
+			productName = MHPatientsAppTests;
+			productReference = 22070A8C2316850300980BD6 /* MHPatientsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22070A962316850300980BD6 /* MHPatientsAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22070AA62316850300980BD6 /* Build configuration list for PBXNativeTarget "MHPatientsAppUITests" */;
+			buildPhases = (
+				22070A932316850300980BD6 /* Sources */,
+				22070A942316850300980BD6 /* Frameworks */,
+				22070A952316850300980BD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22070A992316850300980BD6 /* PBXTargetDependency */,
+			);
+			name = MHPatientsAppUITests;
+			productName = MHPatientsAppUITests;
+			productReference = 22070A972316850300980BD6 /* MHPatientsAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22070A6B231684FF00980BD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Dileep Sanker";
+				TargetAttributes = {
+					22070A72231684FF00980BD6 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					22070A8B2316850300980BD6 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 22070A72231684FF00980BD6;
+					};
+					22070A962316850300980BD6 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 22070A72231684FF00980BD6;
+					};
+				};
+			};
+			buildConfigurationList = 22070A6E231684FF00980BD6 /* Build configuration list for PBXProject "MHPatientsApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22070A6A231684FF00980BD6;
+			productRefGroup = 22070A74231684FF00980BD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22070A72231684FF00980BD6 /* MHPatientsApp */,
+				22070A8B2316850300980BD6 /* MHPatientsAppTests */,
+				22070A962316850300980BD6 /* MHPatientsAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22070A71231684FF00980BD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22070A862316850300980BD6 /* LaunchScreen.storyboard in Resources */,
+				22070AE02316CC3300980BD6 /* PatientsCustomView.xib in Resources */,
+				22070A832316850300980BD6 /* Assets.xcassets in Resources */,
+				22070A7E231684FF00980BD6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22070A8A2316850300980BD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22070A952316850300980BD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22070A6F231684FF00980BD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22070AD22316C59900980BD6 /* PatientsViewController.swift in Sources */,
+				22070AD82316C77C00980BD6 /* PatientsTableViewListCell.swift in Sources */,
+				22070AC623169A0200980BD6 /* NetworkLogger.swift in Sources */,
+				22070AB523168E5900980BD6 /* EndPointType.swift in Sources */,
+				22070ABE231690E500980BD6 /* URLParameterEncoder.swift in Sources */,
+				22070AE22316CF2000980BD6 /* PatientsCustomView.swift in Sources */,
+				22070A81231684FF00980BD6 /* MHPatientsApp.xcdatamodeld in Sources */,
+				22070AB723168F0300980BD6 /* HTTPTask.swift in Sources */,
+				22070AE82316F71400980BD6 /* NibLoadable.swift in Sources */,
+				22070AC02316935900980BD6 /* NetworkRouter.swift in Sources */,
+				22070AB323168DF000980BD6 /* HTTPMethod.swift in Sources */,
+				22070A7B231684FF00980BD6 /* ViewController.swift in Sources */,
+				22070ABC2316901000980BD6 /* ParamEncoding.swift in Sources */,
+				22070ADD2316CB0400980BD6 /* TextPresentable.swift in Sources */,
+				22070AD52316C67700980BD6 /* PatientsViewControllerDataSource.swift in Sources */,
+				22070AAB231686AD00980BD6 /* NetworkManager.swift in Sources */,
+				22070A77231684FF00980BD6 /* AppDelegate.swift in Sources */,
+				22070AD02316A23200980BD6 /* Patient.swift in Sources */,
+				22C132F923185FC900AFB27A /* CoreDataManager.swift in Sources */,
+				22C132F12318499600AFB27A /* SceneDelegate.swift in Sources */,
+				22070ADB2316C95B00980BD6 /* PatientViewModel.swift in Sources */,
+				22070AC42316986E00980BD6 /* JSONParameterEncoder.swift in Sources */,
+				22070AC823169D5200980BD6 /* PatientsEndPoint.swift in Sources */,
+				22070AC2231693E600980BD6 /* Router.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22070A882316850300980BD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22070A912316850300980BD6 /* MHPatientsAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22070A932316850300980BD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22070A9C2316850300980BD6 /* MHPatientsAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22070A8E2316850300980BD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22070A72231684FF00980BD6 /* MHPatientsApp */;
+			targetProxy = 22070A8D2316850300980BD6 /* PBXContainerItemProxy */;
+		};
+		22070A992316850300980BD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22070A72231684FF00980BD6 /* MHPatientsApp */;
+			targetProxy = 22070A982316850300980BD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22070A7C231684FF00980BD6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22070A7D231684FF00980BD6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22070A842316850300980BD6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22070A852316850300980BD6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22070A9E2316850300980BD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22070A9F2316850300980BD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22070AA12316850300980BD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MHPatientsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mhpatients.MHPatientsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22070AA22316850300980BD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MHPatientsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mhpatients.MHPatientsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22070AA42316850300980BD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MHPatientsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mhpatients.MHPatientsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MHPatientsApp.app/MHPatientsApp";
+			};
+			name = Debug;
+		};
+		22070AA52316850300980BD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MHPatientsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mhpatients.MHPatientsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MHPatientsApp.app/MHPatientsApp";
+			};
+			name = Release;
+		};
+		22070AA72316850300980BD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MHPatientsAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mhpatients.MHPatientsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MHPatientsApp;
+			};
+			name = Debug;
+		};
+		22070AA82316850300980BD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MHPatientsAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mhpatients.MHPatientsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MHPatientsApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22070A6E231684FF00980BD6 /* Build configuration list for PBXProject "MHPatientsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22070A9E2316850300980BD6 /* Debug */,
+				22070A9F2316850300980BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22070AA02316850300980BD6 /* Build configuration list for PBXNativeTarget "MHPatientsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22070AA12316850300980BD6 /* Debug */,
+				22070AA22316850300980BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22070AA32316850300980BD6 /* Build configuration list for PBXNativeTarget "MHPatientsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22070AA42316850300980BD6 /* Debug */,
+				22070AA52316850300980BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22070AA62316850300980BD6 /* Build configuration list for PBXNativeTarget "MHPatientsAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22070AA72316850300980BD6 /* Debug */,
+				22070AA82316850300980BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		22070A7F231684FF00980BD6 /* MHPatientsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				22070A80231684FF00980BD6 /* MHPatientsApp.xcdatamodel */,
+			);
+			currentVersion = 22070A80231684FF00980BD6 /* MHPatientsApp.xcdatamodel */;
+			path = MHPatientsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 22070A6B231684FF00980BD6 /* Project object */;
+}
