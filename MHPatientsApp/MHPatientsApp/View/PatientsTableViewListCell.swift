@@ -41,12 +41,6 @@ class PatientsTableViewListCell: UITableViewCell, NibLoadable {
         self.delegate = delegate
         self.contentView.setNeedsLayout()
         self.contentView.layoutIfNeeded()
-      
-//        backgroundColor = .clear
-//        
-//        label.text = delegate.text
-//        label.textColor = delegate.textColor
-//        label.font = delegate.font
     }
 }
 
