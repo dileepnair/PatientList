@@ -10,10 +10,8 @@ import UIKit
 
 
 class PatientsViewController: UIViewController{
-    
     @IBOutlet weak var patientsTableView: UITableView!
     let tableViewDataSource = PatientsViewControllerDataSource()
-
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var patients: [PatientModel]! = [] {
@@ -28,7 +26,6 @@ class PatientsViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // No need for semicolon
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +35,6 @@ class PatientsViewController: UIViewController{
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(refreshPatientsList), name: UIApplication.didBecomeActiveNotification, object: nil)
         let _ = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(refreshPatientsList), userInfo: nil, repeats: true)
-        
     }
     
     @objc func refreshPatientsList(){
@@ -49,9 +45,7 @@ class PatientsViewController: UIViewController{
           getPatientsList()
     }
     
-   
-    
-     func getPatientsList(){
+     func getPatientsList() {
         PatientViewModel.getPatientsList{ patients, success in
             
             let sortedPatients = patients.sorted{ ($0.lastName!, $0.firstName!) <
@@ -65,7 +59,7 @@ class PatientsViewController: UIViewController{
     }
     
     
-    private func configureTableView(){
+    private func configureTableView() {
         patientsTableView.dataSource = tableViewDataSource
         patientsTableView.delegate = self
         DispatchQueue.main.async{

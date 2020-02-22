@@ -27,9 +27,7 @@ final class PatientsCustomView: UIView,NibLoadable{
         super.init(coder: aDecoder)
         setupFromNib()
     }
-    
-   
-    
+
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setupFromNib()
